@@ -316,19 +316,26 @@
     <li class="process-step">
       <div class="process-num">3</div>
       <div class="process-body">
-        <h3>Käsikirjoitus</h3>
-        <p>Toinen LLM-kutsu suunnittelee lähetyksen rakenteen: ankkurin pääuutinen sekä kaksi asiantuntijasegmenttiä (joko ankkurin haastattelu tai yksin luettu raportti). Jokainen segmentti kirjoitetaan omassa LLM-kutsussaan, jotta JSON-rakenne pysyy luotettavana.</p>
-<p class="process-tech"><code>7–9 erillistä LLM-kutsua per jakso · lämpötila 0.7 luovassa osassa</code></p>      </div>
+        <h3>Taustatutkimus</h3>
+        <p>Ennen käsikirjoitusta jokainen uutinen rikastetaan taustatiedoilla. Taloustoimittaja saa makroindikaattorit (inflaatio, korot, BKT, tuottokäyrät) EKP:n, Eurostatin ja FREDin rajapinnoista. Urheilutoimittajalle haetaan henkilö- ja joukkuetiedot Wikipediasta. Politiikan toimittajalle tekoäly laatii historiallisen analyysin samojen henkilöiden ja alueiden aiemmista tapahtumista.</p>
+<p class="process-tech"><code>ECB SDW · Eurostat · FRED · Wikipedia API · SQLite-välimuisti 24h</code></p>      </div>
     </li>
     <li class="process-step">
       <div class="process-num">4</div>
+      <div class="process-body">
+        <h3>Käsikirjoitus</h3>
+        <p>LLM suunnittelee lähetyksen rakenteen: ankkurin pääuutinen sekä kaksi asiantuntijasegmenttiä (joko ankkurin haastattelu tai yksin luettu raportti). Taustatutkimuksen data syötetään asiantuntijasegmenttien promptteihin. Jokainen segmentti kirjoitetaan omassa LLM-kutsussaan luotettavan JSON:n takaamiseksi.</p>
+<p class="process-tech"><code>7–9 erillistä LLM-kutsua per jakso · lämpötila 0.7 luovassa osassa</code></p>      </div>
+    </li>
+    <li class="process-step">
+      <div class="process-num">5</div>
       <div class="process-body">
         <h3>Puhesynteesi</h3>
         <p>Chatterbox-Finnish-malli (suomenkielinen Resemble AI Chatterbox -johdannainen) pyörii omalla Mac Mini M4 Pro -palvelimella. Jokaiselle persoonalle on oma referenssiäänitys, jonka tyyliin malli kloonaa puheen. Pitkät tekstit hajotetaan lauseiksi — malli tuottaa roskaa, jos syöte on liian pitkä.</p>
 <p class="process-tech"><code>Chatterbox-Finnish · 24 kHz WAV · voice cloning · FastAPI @ :5100</code></p>      </div>
     </li>
     <li class="process-step">
-      <div class="process-num">5</div>
+      <div class="process-num">6</div>
       <div class="process-body">
         <h3>Jälkikäsittely ja julkaisu</h3>
         <p>Äänisegmentit yhdistetään, normalisoidaan −16 LUFS:ään ja muunnetaan 128 kbps MP3:ksi. Tiedosto ladataan Cloudflare R2 -varastoon, RSS-syöte generoidaan uudestaan, ja tämä sivu päivittyy automaattisesti jokaisen julkaisun yhteydessä.</p>
@@ -406,7 +413,7 @@
     <span class="footer-dot">·</span>
     <a href="https://pub-a6d913e30fd84057817ffacc0f418869.r2.dev/feed.xml">RSS</a>
     <span class="footer-dot">·</span>
-    <span class="muted">Sivu päivitetty 19. huhtikuuta 2026 klo 14:46</span>
+    <span class="muted">Sivu päivitetty 19. huhtikuuta 2026 klo 14:58</span>
   </div>
 </footer>
 
