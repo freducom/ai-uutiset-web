@@ -145,10 +145,11 @@ img { display: block; max-width: 100%; height: auto; }
   box-shadow: var(--shadow-card);
 }
 .player-meta {
-  display: flex; align-items: center; gap: 10px;
+  display: flex; align-items: center; gap: 10px; flex-wrap: nowrap;
   font-size: 0.85rem; color: var(--text-dim);
   margin-bottom: 8px;
 }
+.player-meta-info { white-space: nowrap; }
 .badge {
   background: var(--accent-soft);
   color: var(--accent);
