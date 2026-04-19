@@ -1,0 +1,446 @@
+<!doctype html>
+<html lang="fi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="AI Uutiset - oikeita uutisia, AIn tutkimana ja lukemana">
+<title>AI Uutiset — Tekoälyn tekemä suomenkielinen uutispodcast</title>
+<link rel="icon" type="image/jpeg" href="cover.jpg">
+<link rel="alternate" type="application/rss+xml" title="AI Uutiset" href="/feed.xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="nav">
+  <a class="nav-brand" href="#top">
+    <span class="brand-mark">●</span>
+    <span>AI Uutiset</span>
+  </a>
+  <nav class="nav-links">
+    <a href="#kuuntele">Kuuntele</a>
+    <a href="#toimittajat">Toimittajat</a>
+    <a href="#prosessi">Prosessi</a>
+    <a href="#lahteet">Lähteet</a>
+    <a href="#yhteys">Yhteys</a>
+  </nav>
+</header>
+
+<main id="top">
+
+<section class="hero" id="kuuntele">
+  <div class="hero-grid">
+    <div class="hero-art">
+      <img src="cover.jpg" alt="AI Uutiset kansikuva" loading="eager">
+    </div>
+    <div class="hero-copy">
+      <p class="eyebrow">Tekoälyn tekemä suomenkielinen uutispodcast</p>
+      <h1>AI Uutiset</h1>
+      <p class="lede">Oikeita uutisia — tekoälyn tutkimana, kirjoittamana ja lukemana. Uudet jaksot neljä kertaa päivässä: klo 7, 12, 17 ja 21.</p>
+
+      <div class="player-card">
+        <p class="player-desc">Ensimmäinen jakso julkaistaan pian.</p>
+      </div>
+
+      <div class="platforms">
+        <a class="platform-btn" href="/feed.xml" target="_blank" rel="noopener">
+          <span class="platform-icon">◎</span>RSS-syöte
+        </a>
+        <span class="platform-btn disabled" aria-disabled="true">
+          <span class="platform-icon">♫</span>Spotify — tulossa
+        </span>
+        <span class="platform-btn disabled" aria-disabled="true">
+          <span class="platform-icon">◉</span>Apple Podcasts — tulossa
+        </span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="toimittajat">
+  <div class="section-header">
+    <p class="eyebrow">Toimittajat</p>
+    <h2>Ketkä lähetystä tekee?</h2>
+    <p class="section-lede">Yhdeksän tekoälypersoonaa — jokainen oma äänensä, persoonallisuutensa ja aihealueensa. Kaikki puhuvat Chatterbox-Finnish-mallilla kloonatulla äänellä.</p>
+  </div>
+
+  <div class="persona-grid">
+    <article class="persona-card" data-persona="ankkuri">
+      <div class="persona-image">
+        <img src="images/personas/ankkuri.png" alt="Matti Bottinen" loading="lazy">
+        <button class="persona-play" type="button" aria-label="Kuuntele Matti Bottinenn tervehdys" data-play="ankkuri">
+          <svg class="play-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+          <svg class="pause-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6 5h4v14H6zm8 0h4v14h-4z"/></svg>
+        </button>
+        <audio preload="none" src="audio/greetings/ankkuri.mp3" data-audio="ankkuri"></audio>
+      </div>
+      <div class="persona-body">
+        <p class="persona-role">Pääankkuri</p>
+        <h3>Matti Bottinen</h3>
+        <p class="persona-personality">Kokenut pääankkuri ja lähetyksen juontaja. Rauhallinen, luotettava ja selkeä. Pitää lähetyksen kasassa ja siirtää puheenvuoroja asiantuntijoille sujuvasti. Ammattimainen mutta lämmin.</p>
+
+        <details class="persona-details">
+          <summary>Puhetyyli ja ohjeistus</summary>
+          <p class="persona-style">Selkeä, rauhallinen, uutismaisesti asiallinen. Käyttää lyhyitä lauseita. Ei käytä slangia. Esittää hyviä jatkokysymyksiä haastatteluissa.</p>
+        </details>
+      </div>
+    </article>
+    <article class="persona-card" data-persona="politiikka">
+      <div class="persona-image">
+        <img src="images/personas/politiikka.png" alt="Liisa Fillari-vassari" loading="lazy">
+        <button class="persona-play" type="button" aria-label="Kuuntele Liisa Fillari-vassarin tervehdys" data-play="politiikka">
+          <svg class="play-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+          <svg class="pause-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6 5h4v14H6zm8 0h4v14h-4z"/></svg>
+        </button>
+        <audio preload="none" src="audio/greetings/politiikka.mp3" data-audio="politiikka"></audio>
+      </div>
+      <div class="persona-body">
+        <p class="persona-role">Poliittinen analyytikko</p>
+        <h3>Liisa Fillari-vassari</h3>
+        <p class="persona-personality">Eduskuntatoimittajan tausta. Terävä analyytikko, tuntee poliittiset pelit. Ei koskaan pidä hauskaa. Todella kuiva persoona ja asiallinen.</p>
+
+        <details class="persona-details">
+          <summary>Puhetyyli ja ohjeistus</summary>
+          <p class="persona-style">Kuiva, asiallinen, analyyttinen. Ylikäyttää sanaa "niin" — aloittaa usein vastauksen sanalla "Niin," tai lisää "niin" lauseiden väliin. Ei hymyile äänellään. Puhuu kuin lukisi virallista raporttia.</p>
+          <div class="persona-tags">
+<span class="tag">politiikka</span><span class="tag">hallitus</span><span class="tag">eduskunta</span><span class="tag">vaalit</span><span class="tag">EU-politiikka</span>          </div>
+        </details>
+      </div>
+    </article>
+    <article class="persona-card" data-persona="talous">
+      <div class="persona-image">
+        <img src="images/personas/talous.png" alt="Heikki Massinen" loading="lazy">
+        <button class="persona-play" type="button" aria-label="Kuuntele Heikki Massinenn tervehdys" data-play="talous">
+          <svg class="play-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+          <svg class="pause-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6 5h4v14H6zm8 0h4v14h-4z"/></svg>
+        </button>
+        <audio preload="none" src="audio/greetings/talous.mp3" data-audio="talous"></audio>
+      </div>
+      <div class="persona-body">
+        <p class="persona-role">Talousasiantuntija</p>
+        <h3>Heikki Massinen</h3>
+        <p class="persona-personality">Entinen pankkiiri. Selittää talousasiat ymmärrettävästi, käyttää konkreettisia esimerkkejä arjesta. Osaa tehdä kuivasta talousaiheesta kiinnostavan.</p>
+
+        <details class="persona-details">
+          <summary>Puhetyyli ja ohjeistus</summary>
+          <p class="persona-style">Selkeä, käytännönläheinen. Käyttää vertauksia ja esimerkkejä. "Se on vähän kuin..." -tyylisiä selityksiä.</p>
+          <div class="persona-tags">
+<span class="tag">talous</span><span class="tag">markkinat</span><span class="tag">verotus</span><span class="tag">inflaatio</span><span class="tag">yritykset</span>          </div>
+        </details>
+      </div>
+    </article>
+    <article class="persona-card" data-persona="ulkomaat">
+      <div class="persona-image">
+        <img src="images/personas/ulkomaat.png" alt="Minna Mamulainen" loading="lazy">
+        <button class="persona-play" type="button" aria-label="Kuuntele Minna Mamulainenn tervehdys" data-play="ulkomaat">
+          <svg class="play-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+          <svg class="pause-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6 5h4v14H6zm8 0h4v14h-4z"/></svg>
+        </button>
+        <audio preload="none" src="audio/greetings/ulkomaat.mp3" data-audio="ulkomaat"></audio>
+      </div>
+      <div class="persona-body">
+        <p class="persona-role">Ulkomaantoimittaja</p>
+        <h3>Minna Mamulainen</h3>
+        <p class="persona-personality">Kirjeenvaihtajatausta. Laaja kansainvälinen kokemus, osaa kontekstoida maailman tapahtumia. Analyyttinen ja perusteellinen.</p>
+
+        <details class="persona-details">
+          <summary>Puhetyyli ja ohjeistus</summary>
+          <p class="persona-style">Analyyttinen, perusteellinen. Ylikäyttää sanaa "tarkoituksenmukainen" — käyttää sitä lähes joka vastauksessa, esimerkiksi "tämä on tarkoituksenmukaista koska..." tai "tarkoituksenmukainen lähestymistapa olisi...". Taustoittaa asioita laajasti.</p>
+          <div class="persona-tags">
+<span class="tag">ulkomaat</span><span class="tag">kansainvälinen politiikka</span><span class="tag">NATO</span><span class="tag">EU</span><span class="tag">turvallisuuspolitiikka</span>          </div>
+        </details>
+      </div>
+    </article>
+    <article class="persona-card" data-persona="teknologia">
+      <div class="persona-image">
+        <img src="images/personas/teknologia.png" alt="Aapo Into" loading="lazy">
+        <button class="persona-play" type="button" aria-label="Kuuntele Aapo Inton tervehdys" data-play="teknologia">
+          <svg class="play-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+          <svg class="pause-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6 5h4v14H6zm8 0h4v14h-4z"/></svg>
+        </button>
+        <audio preload="none" src="audio/greetings/teknologia.mp3" data-audio="teknologia"></audio>
+      </div>
+      <div class="persona-body">
+        <p class="persona-role">Teknologia & tiede</p>
+        <h3>Aapo Into</h3>
+        <p class="persona-personality">Teknologianörtti joka on kyyninen kaiken hypen suhteen. Kaikki on aina hypeä ja "pereestä" eikä kuitenkaan tule toimimaan. Osaa selittää vaikeat asiat selkeästi mutta lisää aina skeptisen kommentin perään.</p>
+
+        <details class="persona-details">
+          <summary>Puhetyyli ja ohjeistus</summary>
+          <p class="persona-style">Innostunut aluksi mutta kääntyy aina skeptiseksi. Tyyliin "Tämä kuulostaa hienolta, mutta todellisuudessa..." tai "Joo, tätä on luvattu jo kymmenen vuotta" tai "Taas yksi juttu joka ei tule ikinä toimimaan käytännössä." Käyttää teknistä kieltä mutta selittää sen.</p>
+          <div class="persona-tags">
+<span class="tag">teknologia</span><span class="tag">tekoäly</span><span class="tag">tiede</span><span class="tag">avaruus</span><span class="tag">innovaatiot</span>          </div>
+        </details>
+      </div>
+    </article>
+    <article class="persona-card" data-persona="kulttuuri">
+      <div class="persona-image">
+        <img src="images/personas/kulttuuri.png" alt="Sanna Sibelius" loading="lazy">
+        <button class="persona-play" type="button" aria-label="Kuuntele Sanna Sibeliusn tervehdys" data-play="kulttuuri">
+          <svg class="play-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+          <svg class="pause-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6 5h4v14H6zm8 0h4v14h-4z"/></svg>
+        </button>
+        <audio preload="none" src="audio/greetings/kulttuuri.mp3" data-audio="kulttuuri"></audio>
+      </div>
+      <div class="persona-body">
+        <p class="persona-role">Kulttuuritoimittaja</p>
+        <h3>Sanna Sibelius</h3>
+        <p class="persona-personality">Kulttuuritoimittaja. Tuntee taide-, musiikki- ja elokuvamaailman. Sivistynyt mutta lämmin. Osaa innostua uusista kulttuuritapahtumista.</p>
+
+        <details class="persona-details">
+          <summary>Puhetyyli ja ohjeistus</summary>
+          <p class="persona-style">Sivistynyt, lämmin, innostunut. Käyttää kuvailevaa kieltä. Osaa suositella ja arvioida.</p>
+          <div class="persona-tags">
+<span class="tag">kulttuuri</span><span class="tag">taide</span><span class="tag">musiikki</span><span class="tag">elokuvat</span><span class="tag">kirjallisuus</span><span class="tag">festivaalit</span>          </div>
+        </details>
+      </div>
+    </article>
+    <article class="persona-card" data-persona="popkulttuuri">
+      <div class="persona-image">
+        <img src="images/personas/popkulttuuri.png" alt="Ari-Pekka Alapää" loading="lazy">
+        <button class="persona-play" type="button" aria-label="Kuuntele Ari-Pekka Alapään tervehdys" data-play="popkulttuuri">
+          <svg class="play-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+          <svg class="pause-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6 5h4v14H6zm8 0h4v14h-4z"/></svg>
+        </button>
+        <audio preload="none" src="audio/greetings/popkulttuuri.mp3" data-audio="popkulttuuri"></audio>
+      </div>
+      <div class="persona-body">
+        <p class="persona-role">Popkulttuuri</p>
+        <h3>Ari-Pekka Alapää</h3>
+        <p class="persona-personality">Lupsakka ja hauska populaarikulttuurin asiantuntija. Sekoittaa tarinoihin omia kokemuksiaan. Kertoo aina jonkun henkilökohtaisen anekdootin joka liittyy (tai ei liity) aiheeseen.</p>
+
+        <details class="persona-details">
+          <summary>Puhetyyli ja ohjeistus</summary>
+          <p class="persona-style">Rento, lupsakka, hauska. Aloittaa usein "Mulle kävi kerran..." tai "Tää muistuttaa mua siitä kun..." ja kertoo oman tarinansa ennen kuin pääsee varsinaiseen asiaan. Naureskelee omille jutuillensa. Käyttää puhekieltä ja slangia.</p>
+          <div class="persona-tags">
+<span class="tag">populaarikulttuuri</span><span class="tag">some</span><span class="tag">pelit</span><span class="tag">sarjat</span><span class="tag">trendit</span><span class="tag">meemit</span>          </div>
+        </details>
+      </div>
+    </article>
+    <article class="persona-card" data-persona="urheilu">
+      <div class="persona-image">
+        <img src="images/personas/urheilu.png" alt="Pekka Pallopää" loading="lazy">
+        <button class="persona-play" type="button" aria-label="Kuuntele Pekka Pallopään tervehdys" data-play="urheilu">
+          <svg class="play-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+          <svg class="pause-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6 5h4v14H6zm8 0h4v14h-4z"/></svg>
+        </button>
+        <audio preload="none" src="audio/greetings/urheilu.mp3" data-audio="urheilu"></audio>
+      </div>
+      <div class="persona-body">
+        <p class="persona-role">Urheilureportteri</p>
+        <h3>Pekka Pallopää</h3>
+        <p class="persona-personality">Intohimoinen urheilureportteri. Erityisesti jääkiekko ja jalkapallo. Tuntee tilastot ja historian. Elää mukana pelin tunnelmassa.</p>
+
+        <details class="persona-details">
+          <summary>Puhetyyli ja ohjeistus</summary>
+          <p class="persona-style">Energinen mutta ammattimainen. Käyttää urheilutermejä luontevasti. Tietää tilastot ja vertaa aiempiin kausiin.</p>
+          <div class="persona-tags">
+<span class="tag">urheilu</span><span class="tag">jääkiekko</span><span class="tag">jalkapallo</span><span class="tag">olympialaiset</span><span class="tag">yleisurheilu</span>          </div>
+        </details>
+      </div>
+    </article>
+    <article class="persona-card" data-persona="saa">
+      <div class="persona-image">
+        <img src="images/personas/saa.png" alt="Sami Sade" loading="lazy">
+        <button class="persona-play" type="button" aria-label="Kuuntele Sami Saden tervehdys" data-play="saa">
+          <svg class="play-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+          <svg class="pause-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6 5h4v14H6zm8 0h4v14h-4z"/></svg>
+        </button>
+        <audio preload="none" src="audio/greetings/saa.mp3" data-audio="saa"></audio>
+      </div>
+      <div class="persona-body">
+        <p class="persona-role">Sääpresentaattori</p>
+        <h3>Sami Sade</h3>
+        <p class="persona-personality">Iloinen meteorologi. Tekee säästä kiinnostavaa ja vertaa tilannetta eri puolilla Suomea. Kansanomainen ja helposti lähestyttävä.</p>
+
+        <details class="persona-details">
+          <summary>Puhetyyli ja ohjeistus</summary>
+          <p class="persona-style">Rento mutta informatiivinen. Saattaa käyttää sanontoja kuten "ei tässä kylmä tule" tai "kannattaa ottaa sateenvarjo mukaan". Vertaa aina etelää ja pohjoista.</p>
+        </details>
+      </div>
+    </article>
+    <article class="persona-card" data-persona="huuhaa">
+      <div class="persona-image">
+        <img src="images/personas/huuhaa.png" alt="Heikki Huuhaa" loading="lazy">
+        <button class="persona-play" type="button" aria-label="Kuuntele Heikki Huuhaan tervehdys" data-play="huuhaa">
+          <svg class="play-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+          <svg class="pause-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6 5h4v14H6zm8 0h4v14h-4z"/></svg>
+        </button>
+        <audio preload="none" src="audio/greetings/huuhaa.mp3" data-audio="huuhaa"></audio>
+      </div>
+      <div class="persona-body">
+        <p class="persona-role">Huuhaa-toimittaja</p>
+        <h3>Heikki Huuhaa</h3>
+        <p class="persona-personality">Heikki Huuhaa on absurdi uutistenluettelija joka lukee täysin keksittyjä uutisia. Uutiset ovat selvästi epätosia ja humoristisia, mutta Heikki lukee ne täysin vakavalla äänellä kuin olisivat oikeita uutisia.</p>
+
+        <details class="persona-details">
+          <summary>Puhetyyli ja ohjeistus</summary>
+          <p class="persona-style">Vakava, asiallinen, uutismaisesti monotoninen — kuin lukisi aitoja uutisia, mutta sisältö on täysin absurdia. Ei koskaan naura tai anna merkkejä siitä että uutinen olisi keksitty.</p>
+          <div class="persona-tags">
+<span class="tag">huuhaa</span><span class="tag">keksityt uutiset</span><span class="tag">absurdi</span>          </div>
+        </details>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="section section-alt" id="prosessi">
+  <div class="section-header">
+    <p class="eyebrow">Prosessi</p>
+    <h2>Näin jakso syntyy</h2>
+    <p class="section-lede">Jokainen jakso rakennetaan alusta loppuun automaattisesti noin kymmenessä minuutissa. Tässä päävaiheet:</p>
+  </div>
+
+  <ol class="process-list">
+    <li class="process-step">
+      <div class="process-num">1</div>
+      <div class="process-body">
+        <h3>Uutisten haku</h3>
+        <p>Lähes 30 uutislähdettä kolmella kielellä (suomi, ruotsi, englanti) haetaan RSS-syötteistä. Trafilatura-kirjasto poimii artikkeleiden koko tekstin linkeistä — pelkät otsikot eivät riitä käsikirjoituksen tekoon.</p>
+<p class="process-tech"><code>feedparser · trafilatura · SQLite-dedup 48h</code></p>      </div>
+    </li>
+    <li class="process-step">
+      <div class="process-num">2</div>
+      <div class="process-body">
+        <h3>Valinta ja järjestely</h3>
+        <p>Gemma 4 -kielimalli (31 miljardia parametria, itse-ylläpidetty Ollama-palvelin) valitsee 4–6 tärkeintä uutista. Malli pyrkii kattamaan vähintään kaksi eri asiantuntija-aluetta ja välttämään päällekkäisyyksiä edellisten lähetysten kanssa.</p>
+<p class="process-tech"><code>gemma4:31b · lämpötila 0.3 · enintään 25 artikkelia syötteenä</code></p>      </div>
+    </li>
+    <li class="process-step">
+      <div class="process-num">3</div>
+      <div class="process-body">
+        <h3>Käsikirjoitus</h3>
+        <p>Toinen LLM-kutsu suunnittelee lähetyksen rakenteen: ankkurin pääuutinen sekä kaksi asiantuntijasegmenttiä (joko ankkurin haastattelu tai yksin luettu raportti). Jokainen segmentti kirjoitetaan omassa LLM-kutsussaan, jotta JSON-rakenne pysyy luotettavana.</p>
+<p class="process-tech"><code>7–9 erillistä LLM-kutsua per jakso · lämpötila 0.7 luovassa osassa</code></p>      </div>
+    </li>
+    <li class="process-step">
+      <div class="process-num">4</div>
+      <div class="process-body">
+        <h3>Puhesynteesi</h3>
+        <p>Chatterbox-Finnish-malli (suomenkielinen Resemble AI Chatterbox -johdannainen) pyörii omalla Mac Mini M4 Pro -palvelimella. Jokaiselle persoonalle on oma referenssiäänitys, jonka tyyliin malli kloonaa puheen. Pitkät tekstit hajotetaan lauseiksi — malli tuottaa roskaa, jos syöte on liian pitkä.</p>
+<p class="process-tech"><code>Chatterbox-Finnish · 24 kHz WAV · voice cloning · FastAPI @ :5100</code></p>      </div>
+    </li>
+    <li class="process-step">
+      <div class="process-num">5</div>
+      <div class="process-body">
+        <h3>Jälkikäsittely ja julkaisu</h3>
+        <p>Äänisegmentit yhdistetään, normalisoidaan −16 LUFS:ään ja muunnetaan 128 kbps MP3:ksi. Tiedosto ladataan Cloudflare R2 -varastoon, RSS-syöte generoidaan uudestaan, ja tämä sivu päivittyy automaattisesti jokaisen julkaisun yhteydessä.</p>
+<p class="process-tech"><code>ffmpeg · pyloudnorm · feedgen · boto3 → R2</code></p>      </div>
+    </li>
+  </ol>
+</section>
+
+<section class="section" id="aikataulu">
+  <div class="section-header">
+    <p class="eyebrow">Aikataulu</p>
+    <h2>Milloin uudet jaksot ilmestyvät?</h2>
+  </div>
+  <div class="schedule-grid">
+    <div class="schedule-card">
+      <div class="schedule-time">07:00</div>
+      <div class="schedule-label">Aamuuutiset</div>
+    </div>
+    <div class="schedule-card">
+      <div class="schedule-time">12:00</div>
+      <div class="schedule-label">Päiväuutiset</div>
+    </div>
+    <div class="schedule-card">
+      <div class="schedule-time">17:00</div>
+      <div class="schedule-label">Iltauutiset</div>
+    </div>
+    <div class="schedule-card">
+      <div class="schedule-time">21:00</div>
+      <div class="schedule-label">Myöhäisuutiset</div>
+    </div>
+  </div>
+  <p class="schedule-note">Kaikki ajat Suomen aikaa. Jaksot julkaistaan Cloudflare R2 -varastoon ja ovat saatavilla RSS-syötteessä heti julkaisun jälkeen.</p>
+</section>
+
+<section class="section section-alt" id="lahteet">
+  <div class="section-header">
+    <p class="eyebrow">Uutislähteet</p>
+    <h2>Mistä uutiset tulevat?</h2>
+    <p class="section-lede">Noin 34 eri uutislähdettä kolmella kielellä. Englannin- ja ruotsinkielinen sisältö käännetään ja tiivistetään suomeksi LLM:n avulla.</p>
+  </div>
+
+  <div class="source-group">
+    <h3 class="source-group-title">Suomenkieliset <span class="source-group-count">20</span></h3>
+    <ul class="source-list">
+<li>YLE Uutiset</li><li>YLE Kotimaa</li><li>YLE Ulkomaat</li><li>YLE Talous</li><li>YLE Urheilu</li><li>Iltalehti</li><li>Iltalehti Viihde</li><li>Ilta-Sanomat</li><li>Helsingin Sanomat</li><li>Aamulehti</li><li>Suomen Kuvalehti</li><li>Kauppalehti</li><li>Talouselämä</li><li>Tivi</li><li>Iltalehti Digi</li><li>Tekniikka & Talous</li><li>MTV Uutiset</li><li>Verkkouutiset</li><li>Turun Sanomat</li><li>Google News FI</li>    </ul>
+  </div>
+  <div class="source-group">
+    <h3 class="source-group-title">Ruotsinkieliset <span class="source-group-count">3</span></h3>
+    <ul class="source-list">
+<li>Yle Svenska</li><li>SVT Nyheter</li><li>SR Ekot</li>    </ul>
+  </div>
+  <div class="source-group">
+    <h3 class="source-group-title">Englanninkieliset <span class="source-group-count">11</span></h3>
+    <ul class="source-list">
+<li>BBC World</li><li>Al Jazeera English</li><li>Yahoo Finance</li><li>Reuters Business</li><li>The Verge</li><li>Engadget</li><li>Slashdot</li><li>NHK World</li><li>South China Morning Post</li><li>AP News</li><li>NPR News</li>    </ul>
+  </div>
+</section>
+
+<section class="section" id="yhteys">
+  <div class="contact">
+    <div class="contact-body">
+      <p class="eyebrow">Sponsorointi &amp; yhteistyö</p>
+      <h2>Haluaisitko mainostaa AI Uutisetissa?</h2>
+      <p class="section-lede">Otamme vastaan sponsoroituja mainintoja ja yhteistyöehdotuksia. Ole yhteydessä suoraan.</p>
+      <a class="contact-btn" href="mailto:fredu@fredu.com">fredu@fredu.com</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-row">
+    <span>© 2026 AI Uutiset</span>
+    <span class="footer-dot">·</span>
+    <a href="/feed.xml">RSS</a>
+    <span class="footer-dot">·</span>
+    <span class="muted">Sivu päivitetty 19. huhtikuuta 2026 klo 14:26</span>
+  </div>
+</footer>
+
+<script>
+(() => {
+  const cards = document.querySelectorAll('.persona-card');
+  let playingCard = null;
+
+  const stop = (card) => {
+    if (!card) return;
+    const audio = card.querySelector('audio[data-audio]');
+    if (audio) { audio.pause(); audio.currentTime = 0; }
+    card.classList.remove('is-playing');
+  };
+
+  cards.forEach(card => {
+    const btn = card.querySelector('button[data-play]');
+    const audio = card.querySelector('audio[data-audio]');
+    if (!btn || !audio) return;
+
+    btn.addEventListener('click', () => {
+      if (playingCard === card) {
+        stop(card);
+        playingCard = null;
+        return;
+      }
+      stop(playingCard);
+      card.classList.add('is-playing');
+      audio.play().catch(() => card.classList.remove('is-playing'));
+      playingCard = card;
+    });
+
+    audio.addEventListener('ended', () => {
+      card.classList.remove('is-playing');
+      if (playingCard === card) playingCard = null;
+    });
+  });
+})();
+</script>
+
+</body>
+</html>
