@@ -553,6 +553,6 @@ audio {
 .disclaimer-banner {
   background: #2a1a00; border: 1px solid #5a3a00; border-radius: var(--radius);
   color: #f0c040; font-size: 0.85rem; padding: 12px 20px; margin: 80px 20px 0;
-  max-width: 900px; margin-left: auto; margin-right: auto; text-align: center;
+  max-width: 900px; margin: 0 auto 0; text-align: center;
   line-height: 1.5;
 }
