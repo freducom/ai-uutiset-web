@@ -153,6 +153,24 @@ img { display: block; max-width: 100%; height: auto; }
   margin-bottom: 8px;
 }
 .player-meta-info { white-space: nowrap; }
+.player-sources {
+  margin-top: 12px; font-size: 0.75rem; color: var(--text-mute);
+}
+.player-sources summary {
+  cursor: pointer; color: var(--text-dim); font-size: 0.8rem;
+}
+.player-sources summary:hover { color: var(--accent); }
+.player-sources ul {
+  margin: 8px 0 0; padding: 0; list-style: none;
+}
+.player-sources li {
+  padding: 4px 0; border-top: 1px solid var(--border);
+}
+.player-sources a { color: var(--text-dim); }
+.player-sources a:hover { color: var(--accent); }
+.player-sources .source-name {
+  margin-left: 6px; color: var(--text-mute); font-size: 0.7rem;
+}
 .badge {
   background: var(--accent-soft);
   color: var(--accent);
