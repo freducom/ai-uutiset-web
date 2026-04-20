@@ -302,42 +302,42 @@
       <div class="process-num">1</div>
       <div class="process-body">
         <h3>Uutisten haku</h3>
-        <p>Lähes 30 uutislähdettä kolmella kielellä (suomi, ruotsi, englanti) haetaan RSS-syötteistä. Trafilatura-kirjasto poimii artikkeleiden koko tekstin linkeistä — pelkät otsikot eivät riitä käsikirjoituksen tekoon.</p>
-<p class="process-tech"><code>feedparser · trafilatura · SQLite-dedup 48h</code></p>      </div>
+        <p>Järjestelmä käy läpi lähes kolmekymmentä uutislähdettä kolmella kielellä — suomeksi, ruotsiksi ja englanniksi. Pelkkien otsikoiden sijaan haetaan koko artikkelin teksti, jotta tekoäly ymmärtää uutisen sisällön.</p>
+      </div>
     </li>
     <li class="process-step">
       <div class="process-num">2</div>
       <div class="process-body">
         <h3>Valinta ja järjestely</h3>
-        <p>Gemma 4 -kielimalli (31 miljardia parametria, itse-ylläpidetty Ollama-palvelin) valitsee 4–6 tärkeintä uutista. Malli pyrkii kattamaan vähintään kaksi eri asiantuntija-aluetta ja välttämään päällekkäisyyksiä edellisten lähetysten kanssa.</p>
-<p class="process-tech"><code>gemma4:31b · lämpötila 0.3 · enintään 25 artikkelia syötteenä</code></p>      </div>
+        <p>Tekoäly lukee kaikki haetut artikkelit ja valitsee niistä neljästä kuuteen tärkeintä. Se pyrkii kattamaan eri aihealueita — kotimaata, ulkomaita, taloutta, teknologiaa — ja välttää toistamasta edellisten lähetysten uutisia.</p>
+      </div>
     </li>
     <li class="process-step">
       <div class="process-num">3</div>
       <div class="process-body">
         <h3>Taustatutkimus</h3>
-        <p>Ennen käsikirjoitusta jokainen uutinen rikastetaan taustatiedoilla. Taloustoimittaja saa makroindikaattorit (inflaatio, korot, BKT, tuottokäyrät) EKP:n, Eurostatin ja FREDin rajapinnoista. Urheilutoimittajalle haetaan henkilö- ja joukkuetiedot Wikipediasta. Politiikan toimittajalle tekoäly laatii historiallisen analyysin samojen henkilöiden ja alueiden aiemmista tapahtumista.</p>
-<p class="process-tech"><code>ECB SDW · Eurostat · FRED · Wikipedia API · SQLite-välimuisti 24h</code></p>      </div>
+        <p>Ennen käsikirjoitusta jokainen uutinen rikastetaan taustatiedoilla. Taloustoimittaja saa tuoreet makrotalouden luvut — inflaation, korot ja talouskasvun. Urheilutoimittajalle haetaan taustatietoja mainituista henkilöistä ja joukkueista. Politiikan toimittajalle laaditaan historiallinen analyysi samojen henkilöiden ja alueiden aiemmista tapahtumista.</p>
+      </div>
     </li>
     <li class="process-step">
       <div class="process-num">4</div>
       <div class="process-body">
         <h3>Käsikirjoitus</h3>
-        <p>LLM suunnittelee lähetyksen rakenteen: ankkurin pääuutinen sekä kaksi asiantuntijasegmenttiä (joko ankkurin haastattelu tai yksin luettu raportti). Taustatutkimuksen data syötetään asiantuntijasegmenttien promptteihin. Jokainen segmentti kirjoitetaan omassa LLM-kutsussaan luotettavan JSON:n takaamiseksi.</p>
-<p class="process-tech"><code>7–9 erillistä LLM-kutsua per jakso · lämpötila 0.7 luovassa osassa</code></p>      </div>
+        <p>Tekoäly suunnittelee lähetyksen rakenteen ja kirjoittaa käsikirjoituksen segmentti kerrallaan: intro, pääuutinen, asiantuntijahaastattelut, muut uutiset, sää ja lopetus. Jokaisella toimittajapersoonalla on oma persoonallisuutensa ja puhetyylinsä, joka näkyy vuorosanoissa.</p>
+      </div>
     </li>
     <li class="process-step">
       <div class="process-num">5</div>
       <div class="process-body">
         <h3>Puhesynteesi</h3>
-        <p>Chatterbox-Finnish-malli (suomenkielinen Resemble AI Chatterbox -johdannainen) pyörii omalla Mac Mini M4 Pro -palvelimella. Jokaiselle persoonalle on oma referenssiäänitys, jonka tyyliin malli kloonaa puheen. Pitkät tekstit hajotetaan lauseiksi — malli tuottaa roskaa, jos syöte on liian pitkä.</p>
-<p class="process-tech"><code>Chatterbox-Finnish · 24 kHz WAV · voice cloning · FastAPI @ :5100</code></p>      </div>
+        <p>Käsikirjoitus muutetaan puheeksi suomalaisella tekoälyäänimallilla. Jokaisella persoonalla on oma äänensä, joka on kloonattu lyhyestä ääninäytteestä. Teksti käsitellään lause kerrallaan luonnollisen lopputuloksen varmistamiseksi.</p>
+      </div>
     </li>
     <li class="process-step">
       <div class="process-num">6</div>
       <div class="process-body">
         <h3>Jälkikäsittely ja julkaisu</h3>
-        <p>Äänisegmentit yhdistetään, normalisoidaan −16 LUFS:ään ja muunnetaan 128 kbps MP3:ksi. Tiedosto ladataan Cloudflare R2 -varastoon, RSS-syöte generoidaan uudestaan, ja tämä sivu päivittyy automaattisesti jokaisen julkaisun yhteydessä.</p>
+        <p>Äänisegmentit yhdistetään, äänenvoimakkuus tasataan ja kokonaisuus muunnetaan podcast-muotoon. Jakso ladataan verkkoon, podcast-syöte päivitetään ja tämä sivu päivittyy automaattisesti.</p>
 <p class="process-tech"><code>ffmpeg · pyloudnorm · feedgen · boto3 → R2</code></p>      </div>
     </li>
   </ol>
@@ -389,7 +389,7 @@
     <span class="footer-dot">·</span>
     <a href="https://pub-a6d913e30fd84057817ffacc0f418869.r2.dev/feed.xml">RSS</a>
     <span class="footer-dot">·</span>
-    <span class="muted">Sivu päivitetty 20. huhtikuuta 2026 klo 11:47</span>
+    <span class="muted">Sivu päivitetty 20. huhtikuuta 2026 klo 11:48</span>
   </div>
 </footer>
 
