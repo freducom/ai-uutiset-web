@@ -153,7 +153,7 @@ img { display: block; max-width: 100%; height: auto; }
   margin-bottom: 8px;
 }
 .player-meta-info { white-space: nowrap; }
-.platform-icon { vertical-align: middle; margin-right: 4px; }
+.platform-icon, .platform-logo { vertical-align: middle; margin-right: 6px; }
 .player-sources {
   margin-top: 12px; font-size: 0.75rem; color: var(--text-mute);
 }
