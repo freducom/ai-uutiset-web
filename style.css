@@ -560,6 +560,16 @@ audio {
 .footer-dot { color: var(--text-mute); }
 .footer a:hover { color: var(--accent); }
 .muted { color: var(--text-mute); }
+/* Episodes list */
+.episodes-list { max-width: 700px; }
+.episode-item {
+  display: block; padding: 14px 0; border-bottom: 1px solid var(--border);
+  text-decoration: none; color: var(--text);
+}
+.episode-item:hover { color: var(--accent); }
+.episode-title { display: block; font-weight: 600; font-size: 0.95rem; }
+.episode-desc { display: block; font-size: 0.8rem; color: var(--text-mute); margin-top: 4px; }
+
 .footer-legal {
   max-width: 700px; margin: 24px auto 0; text-align: left;
   font-size: 0.75rem; color: var(--text-mute); line-height: 1.6;
